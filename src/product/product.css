@@ -1,0 +1,25 @@
+.product-container {
+    width: 100%; /* Fix width to take up the full width of its parent */
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1677ff;
+    color: white;
+}
+
+.search-wrapper {
+    display: flex; /* Add display flex to align items */
+    justify-content: space-between; /* Space between input and button */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+}
+
+.search-field {
+    width: 30%;
+}
+
+.add-btn {
+    height: 39px;
+}
