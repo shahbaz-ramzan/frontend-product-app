@@ -67,7 +67,7 @@ const ProductList = () => {
 
   return (
     <div>
-      <h1>Product List</h1>
+      <h1>Product Lists</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

@@ -1,30 +1,20 @@
 
-//get all products
-import { useDispatch } from 'react-redux';
-import { fetchProductsStart, fetchProductsSuccess, fetchProductsFailure } from '../reduxSlices/productSlice';
+export const  getProductList=async ()=> {
 
-import { useDispatch } from 'react-redux';
-
-function ProductList() {
-  const dispatch = useDispatch();
-
-  const fetchProducts = async () => {
     try {
-      dispatch(fetchProductsStart());
+      // dispatch(fetchProductsStart());
       const response = await fetch("http://localhost:3000/api/products");
       const data = await response.json();
-      dispatch(fetchProductsSuccess(data));
+      // dispatch(fetchProductsSuccess(data));
       return data;
     } catch (error) {
       // dispatch(fetchProductsFailure(error.message));
       console.error("Error fetching products:", error);
     }
-  };
 
   // ... rest of your component logic using fetchProducts
 }
 
-export default ProductList;
 // add new product
 export const addProduct = async (product) => {
   try {
